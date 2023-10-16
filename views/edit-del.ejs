@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update</title>
+  <style>
+                           /* Navbar container */
+.navbar {
+  background-color: #ffffff;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Navbar logo */
+.navbar-logo a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar menu items */
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-item:first-child {
+  margin-left: auto;
+}
+
+.navbar-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-menu a:hover {
+  color: #0088cc;
+}
+
+.container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 100px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form-group {
+      margin-bottom: 20px;
+    }
+  .post-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }  
+  .post-description{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+.article {
+background-color: #fff;
+margin-bottom: 20px;
+border-radius: 5px;
+padding: 50px;
+ 
+}
+.update {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.update:hover {
+  background-color: #555;
+}
+/* footer start */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  position:fixed;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a><img src="Vartalab.png" alt="logo" height="95px" width="250px"></a>
+    </div>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="/">Home</a></li>
+      <li class="navbar-item"><a href="#">Discover</a></li>
+      <li class="navbar-item"><a href="#/cap">Write</a></li>
+      <li class="navbar-item"><a href="#">Profile</a></li>
+      <li class="navbar-item"><a href="/logout">Login</a></li>
+      <li class="navbar-item"><a href="/signup">Register</a></li>
+      <li class="navbar-item"><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="container">
+      <h1>Edit/Delete a Post</h1>
+      <% indices.forEach(function(index) { %>
+        <div class="post-title"><%= title[index] %></div>
+        <div class="post-description"><%= description[index] %></div>    
+          <div class="article">
+            <a href="/edit/<%=i%>" class="update">Edit a Post</a>
+            <a href="/del/<%=i%>" class="update">Delete a Post</a>
+          </div>
+        <%});%>
+     </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>

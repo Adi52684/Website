@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+
+               /* Navbar container */
+.navbar {
+  background-color: #ffffff;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Navbar logo */
+.navbar-logo a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar menu items */
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-item:first-child {
+  margin-left: auto;
+}
+
+.navbar-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-menu a:hover {
+  color: #0088cc;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .form-group .social-login {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .form-group .social-login button {
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form-group .social-login .google {
+      background-color: #dd4b39;
+      color: #fff;
+      border: none;
+    }
+
+    .form-group .social-login .facebook {
+      background-color: #3b5998;
+      color: #fff;
+      border: none;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .login-link a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    .social-login img {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .centered-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* footer start */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a><img src="Vartalab.png" alt="logo" height="95px" width="250px"></a>
+    </div>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="/">Home</a></li>
+      <li class="navbar-item"><a href="/login">Login</a></li>
+      <li class="navbar-item"><a href="/signup">Register</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form action="/signup" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="asd" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="cpd" required>
+       </div>
+       <!-- <div class="form-group">
+        <label for="acc">Acount type
+  
+        </label>
+        <input type="password" id="confirm-password" name="cpd" required>
+      </div> -->
+      <div class="form-group">
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+    <div class="form-group social-login centered-buttons">
+       <a href="https://accounts.google.com"><button class="google">
+            <img src="google-logo.png" alt="Google Logo" height="20">
+            Sign Up with Google 
+          </button></a>
+         <a href="https://m.facebook.com/"><button class="facebook">
+            <img src="facebook-logo.png" alt="Facebook Logo" height="20">
+            Sign Up with Facebook 
+      </button></a>
+    </div>
+    <div class="login-link">
+      <a href="/login">Already a user? Login here</a>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Vartalap. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

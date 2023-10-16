@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+           /* Navbar container */
+.navbar {
+  background-color: #ffffff;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+/* Navbar logo */
+.navbar-logo a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar menu items */
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-item:first-child {
+  margin-left: auto;
+}
+
+.navbar-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar-menu a:hover {
+  color: #0088cc;
+}
+
+.container {
+  display: flex;
+  align-items: center; 
+  height: 70vh;
+  padding: 80px;
+  background-color: #f7f7f7;
+
+}
+
+.left-section {
+  flex-basis: 50%; 
+  padding-right: 40px; 
+  text-align: right; 
+}
+
+.right-section {
+  flex-basis: 25%;
+}
+
+.register-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.register-btn:hover {
+  background-color: #555;
+}
+
+form {
+  display: flex; 
+  flex-direction: column; 
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* footer start */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a><img src="Vartalab.png" alt="logo" height="95px" width="250px"></a>
+    </div>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="/">Home</a></li>
+      <li class="navbar-item"><a href="/login">Login</a></li>
+      <li class="navbar-item"><a href="/signup">Register</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="left-section">
+      <h1>Create an Account</h1>
+      <a href="/signup" class="register-btn">SIGN UP</a>
+    </div>
+    <div class="right-section">
+      <h1>Login</h1>
+      <form method="post" action="/auth">
+        <input type="text" placeholder="Username" name=username required>
+        <input type="password" placeholder="Password" name=password required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Vartalap. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
